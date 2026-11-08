@@ -1,9 +1,9 @@
 [project]
 name = "chordsurv"
-version = "0.1.0"
+version = "0.1.1"
 description = "Survival modelling on MSK-CHORD: 6-month landmark risk of death, survival by cancer type, immunotherapy vs chemotherapy in stage 4 NSCLC"
 readme = "README.md"
-requires-python = ">=3.12,<3.14"
+requires-python = ">=3.12,<3.15"
 dependencies = [
     "numpy>=2.2",
     "pandas>=2.2,<3",

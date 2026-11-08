@@ -8,11 +8,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.13", "3.14"]
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
         with:
-          python-version: "3.13"
+          python-version: ${{ matrix.python-version }}
       - name: Install (versions from uv.lock, CPU-only torch)
         run: uv sync --locked
       - name: Lint

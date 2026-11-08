@@ -12,10 +12,14 @@ For a patient alive 6 months after their first tumour sequencing, `chordsurv` pr
 The models and settings come from the Model Development Report (Parts I and II, semester project in Modelling in Data Science, VŠE). The risk is a research output, not a clinical tool.
 
 ## Install
+In a new virtual environment (Python 3.12, 3.13 or 3.14):
 ```bash
-pip install "git+https://github.com/OndrejZ24/cancer-research-mock-prod@v0.1.0"
+python3 -m venv .venv-chordsurv
+source .venv-chordsurv/bin/activate          # Windows: .venv-chordsurv\Scripts\activate
+pip install "git+https://github.com/OndrejZ24/cancer-research-mock-prod@v0.1.1"
+chordsurv demo                               # checks the install on synthetic data
 ```
-Python 3.12 or 3.13. On macOS, XGBoost also needs `brew install libomp`. For development: `uv sync` (versions pinned in `uv.lock`, CPU-only torch on Linux).
+On macOS, XGBoost also needs `brew install libomp`. For development: `uv sync` (versions pinned in `uv.lock`, CPU-only torch on Linux).
 
 ## Use
 Without any data, `chordsurv demo` shows the whole flow on synthetic patients (train, predict, refuse bad inputs). `notebooks/usage_example.ipynb` does the same step by step.

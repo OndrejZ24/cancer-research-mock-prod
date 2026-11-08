@@ -1,0 +1,21 @@
+# MSK-CHORD is CC BY-NC-ND: never commit raw or processed data
+data/*
+!data/README.md
+# fitted models and patient-level predictions are derived from the data
+artifacts/
+*.parquet
+*.csv
+*.txt.gz
+# aggregate results (no patient-level rows) may be shared
+!results/**/*.csv
+# smoke-test output and run logs
+results/part2_quick/
+logs/
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.env
+# synthetic golden predictions for the tests (no patient data)
+!tests/golden/*.csv

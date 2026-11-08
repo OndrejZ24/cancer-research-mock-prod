@@ -1,0 +1,10 @@
+{
+ "estimand": "S_c(24) = P(alive 24 months after first sequencing), MSK-sequenced patients",
+ "estimator": "Kaplan-Meier; Greenwood SE; 95 % log(-log) CI; era-standardised KM as alternative",
+ "n": 24948,
+ "bootstrap_reps": 1000,
+ "logrank_chi2": 2068.2398201172214,
+ "logrank_df": 4,
+ "logrank_p": 0.0,
+ "max_abs_pooled_minus_standardised_pp": 0.35782690687644614
+}
